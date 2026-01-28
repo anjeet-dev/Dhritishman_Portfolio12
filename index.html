@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dhritishman | Fun Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+body{
+    background:#020617;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* BACKGROUND BLOBS */
+.blob{
+    position:fixed;
+    width:300px;
+    height:300px;
+    background:radial-gradient(circle,#38bdf8,transparent 70%);
+    filter:blur(90px);
+    animation:move 15s infinite alternate;
+    z-index:-1;
+}
+.blob:nth-child(1){top:-100px;left:-100px}
+.blob:nth-child(2){bottom:-100px;right:-100px;animation-delay:6s}
+
+@keyframes move{
+    from{transform:translate(0,0)}
+    to{transform:translate(200px,200px)}
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+/* PHOTO */
+.photo{
+    width:210px;
+    height:210px;
+    border-radius:50%;
+    padding:8px;
+    background:linear-gradient(45deg,#38bdf8,#22d3ee);
+    box-shadow:0 0 45px #38bdf8;
+}
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    display:block;
+}
+
+.hero h1{
+    font-size:3.2rem;
+    margin-top:20px;
+    color:#38bdf8;
+}
+
+.typing{
+    font-size:1.2rem;
+    margin-top:10px;
+    min-height:30px;
+}
+
+/* SECTIONS */
+section{
+    padding:90px 10%;
+    opacity:0;
+    transform:translateY(100px);
+    transition:1s;
+}
+section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* CARD */
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:35px;
+    margin-bottom:40px;
+}
+
+h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+    font-size:2.3rem;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.box{
+    padding:25px;
+    border-radius:18px;
+    text-align:center;
+    background:linear-gradient(135deg,#38bdf820,#22d3ee20);
+    font-size:1.1rem;
+    transition:0.4s;
+}
+.box:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 25px #38bdf8;
+}
+
+/* ACHIEVEMENTS */
+.achievement{
+    padding:15px;
+    border-left:4px solid #38bdf8;
+    margin-bottom:15px;
+    padding-left:20px;
+}
+
+/* MINI GAME */
+.game-area{
+    position:relative;
+    height:300px;
+    border-radius:20px;
+    background:linear-gradient(135deg,#020617,#0f172a);
+    overflow:hidden;
+}
+.star{
+    position:absolute;
+    font-size:40px;
+    cursor:pointer;
+}
+.score{
+    margin-top:15px;
+    font-size:1.2rem;
+}
+
+/* BUTTONS */
+.buttons{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+}
+.btn{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:16px 34px;
+    border-radius:50px;
+    text-decoration:none;
+    color:#020617;
+    font-weight:800;
+    background:linear-gradient(45deg,#38bdf8,#22d3ee);
+    box-shadow:0 0 25px #38bdf8;
+    transition:0.4s;
+}
+.btn img{
+    width:28px;
+}
+.btn:hover{
+    transform:scale(1.15);
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+
+<div class="blob"></div>
+<div class="blob"></div>
+
+<div class="hero">
+    <div class="photo">
+        <img src="img.jpg">
+    </div>
+    <h1>Dhritishman</h1>
+    <div class="typing" id="typing"></div>
+</div>
+
+<!-- STORY -->
+<section>
+<div class="card">
+<h2>🎓 My Navodaya Story</h2>
+<p>
+I am Dhritishman from JNV Kamrup Rangia.  
+I prepared with discipline and confidence for Navodaya entrance exam.  
+Today I live my Navodaya life happily with learning, sports and friends.
+</p>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section>
+<div class="card">
+<h2>💡 My Skills</h2>
+<div class="grid">
+<div class="box">📘 Strong Academics</div>
+<div class="box">💻 Computer Basics</div>
+<div class="box">🎤 Public Speaking</div>
+<div class="box">🤝 Team Work</div>
+<div class="box">🎯 Discipline</div>
+<div class="box">⚽ Sports Skills</div>
+</div>
+</div>
+</section>
+
+<!-- HOBBIES -->
+<section>
+<div class="card">
+<h2>🎨 My Hobbies</h2>
+<div class="grid">
+<div class="box">📚 Reading Books</div>
+<div class="box">⚽ Playing Sports</div>
+<div class="box">🎵 Listening Music</div>
+<div class="box">✍️ Writing & Drawing</div>
+<div class="box">💻 Learning Technology</div>
+<div class="box">🌱 Nature Walk</div>
+</div>
+</div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section>
+<div class="card">
+<h2>🏆 Achievements</h2>
+<div class="achievement">✅ Selected in Jawahar Navodaya Vidyalaya</div>
+<div class="achievement">🏅 Active Participant in School Activities</div>
+<div class="achievement">📚 Consistent Academic Performer</div>
+<div class="achievement">⚽ Participated in Sports Events</div>
+</div>
+</section>
+
+<!-- MINI GAME -->
+<section>
+<div class="card">
+<h2>🎮 Mini Game – Catch the Star</h2>
+<div class="game-area" id="game">
+    <div class="star" id="star">⭐</div>
+</div>
+<div class="score">Score: <span id="score">0</span></div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section>
+<div class="card">
+<h2>📞 Connect With Me</h2>
+<div class="buttons">
+<a class="btn" href="https://www.instagram.com/dhritishman91?igsh=MWVvbWNlbjI3YmFycw==" target="_blank">
+<img src="instagram.png"> Instagram
+</a>
+<a class="btn" href="https://wa.me/916299800036" target="_blank">
+<img src="whatsapp.png"> WhatsApp
+</a>
+</div>
+</div>
+</section>
+
+<footer>
+© 2026 Dhritishman | Proud Navodayan 💙
+</footer>
+
+<script>
+/* typing */
+const text="Class 7 | JNV Kamrup Rangia | Dream • Discipline • Success 💙";
+let i=0;
+setInterval(()=>{
+ if(i<text.length){
+   document.getElementById("typing").innerHTML+=text.charAt(i);
+   i++;
+ }
+},80);
+
+/* scroll animation */
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+ sections.forEach(sec=>{
+  if(sec.getBoundingClientRect().top < window.innerHeight-120){
+   sec.classList.add("show");
+  }
+ });
+});
+
+/* game */
+const star=document.getElementById("star");
+const game=document.getElementById("game");
+const scoreEl=document.getElementById("score");
+let score=0;
+
+function moveStar(){
+ star.style.left=Math.random()*(game.clientWidth-40)+"px";
+ star.style.top=Math.random()*(game.clientHeight-40)+"px";
+}
+star.onclick=()=>{
+ score++;
+ scoreEl.textContent=score;
+ moveStar();
+}
+moveStar();
+</script>
+
+</body>
+</html>
